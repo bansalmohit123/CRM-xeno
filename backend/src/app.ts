@@ -12,7 +12,10 @@ import segmentRulesRouter from './apis/routes/segmentRules.route';
 const app: Express = express();
 
 app.use(cors({
-    origin : "*"
+    origin: [
+        "https://crm-xeno-plum.vercel.app",
+        "http://localhost:3000"
+    ]
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
