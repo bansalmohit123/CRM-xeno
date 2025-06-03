@@ -23,7 +23,7 @@ const OAuthLogin = () => {
       return;
     }
     sessionStorage.setItem('googleIdToken', credential);  
-    const res = await fetch('http://localhost:5001/api/users/create', {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/users/create`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
